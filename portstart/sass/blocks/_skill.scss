@@ -1,0 +1,66 @@
+.skill {
+    padding: 120px;
+    .line-orange {
+        margin: 25px auto 0;
+    }
+    &__box {
+        display: grid;
+        margin-top: 60px;
+        justify-content: center;
+        grid-template-columns: repeat(4, minmax(auto, 270px));
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        grid-auto-rows: minmax(auto, auto);
+        gap: 13px;
+        .box-elem {
+            border: 1px solid black;
+            padding: 30px;
+            &__img-jquery {
+                margin-top: 15px;
+            }
+            &__img-mongo {
+                margin-top: 8px;
+            }
+            &__header {
+                margin-top: 20px;
+            }
+            &__header-jquery {
+                margin-top: 30px;
+            }
+            &__header-mongo {
+                margin-top: 32px;
+            }
+            &__descr {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 18px;
+            }
+        }
+    }
+    &-progress {
+        position: absolute;
+        &__box {
+            display: grid;
+            margin-top: 120px;
+            justify-content: space-between;
+            grid-template-columns: repeat(3, minmax(auto, auto));
+            grid-template-rows: repeat(2, minmax(auto, auto));
+            grid-auto-rows: minmax(auto, auto);
+            gap: 45px 30px;
+        }
+        &__elem {
+            width: 350px;
+            height: 70px;
+        }
+        &__flex-block {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 26px;
+        }
+        &__header {
+            position: relative;
+            @include before_circle;
+            padding-top: 2px;
+            padding-left: 15px;
+        }
+    }
+}

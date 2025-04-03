@@ -1,0 +1,30 @@
+.price {
+    margin-top: 66px;
+    .line-orange {
+        margin: 25px auto 0;
+    }
+    &__blocks {
+        margin-top: 60px;
+        display: grid;
+        grid-template: repeat(3, 44px) / repeat(2, 370px);
+        grid-auto-rows: minmax(44, 370px);
+        justify-content: space-between;
+        gap: 15px 306px;
+
+    }
+    &__elem {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header {
+        font-weight: 700;
+        margin-bottom: 5px;
+        position: relative;
+        @include before_circle_li;
+        padding-left: 25px;
+    }
+    &__descr {
+        font-size: 12px;
+        padding-left: 25px;
+    }
+}

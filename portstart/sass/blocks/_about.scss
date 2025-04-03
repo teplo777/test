@@ -1,0 +1,72 @@
+.about {
+    min-height: 600px;
+    padding-top: 120px;
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, auto));
+        grid-template-rows: repeat(2, minmax(auto, auto));
+        grid-auto-rows: minmax(auto, auto);
+        gap: 40px 70px;
+    }
+    #first {
+        grid-row: 1/3;
+    }
+        
+    #second {
+        grid-row: 1;
+    }
+        
+    #third {
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px, auto));
+        grid-template-rows: repeat(2, minmax(116px, auto));
+        grid-auto-rows: minmax(auto, auto);
+        gap: 20px 50px;
+        padding-top: 0;
+    }
+    &__subtitle {
+        position: relative;
+        @include before_circle;
+        padding-left: 15px;
+        z-index: 2;
+        margin-bottom: 10px;
+    }
+    .title {
+        margin-top: 5px;
+        width: 445px;
+    }
+    &__descr {
+        margin-top: 15px;
+        width: 570px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+    .attachment {
+        display: flex;
+        & svg {
+            flex: 0 0 auto; /* Не позволяет элементу сжиматься или растягиваться */
+        }
+        &__descr {
+            margin-left: 20px;
+            width: 200px;
+            &__header {
+                font-size: 14px;
+                font-weight: 700;             
+            }
+            &__subheader {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.line-orange {
+    border: none;
+    border: 3px solid #FFA501;
+    width: 60px;
+}
+
