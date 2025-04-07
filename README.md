@@ -21,12 +21,13 @@
 
 ## 📂 Проекты
 
-### 🌐 [Название проекта](https://github.com/yourusername/project-name)  
-Описание проекта (какие технологии использовались, какие задачи решались).  
+### 🌐 https://teplo777.github.io/test/bitrix
 
-### 🌐 [Название проекта](https://github.com/yourusername/project-name)  
-Описание проекта.  
+### 🌐 https://teplo777.github.io/test/portstart  
 
+### 🌐 https://teplo777.github.io/test/pulse
+
+### 🌐 https://teplo777.github.io/test/wordpress
 
 ---
 
