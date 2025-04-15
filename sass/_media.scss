@@ -1,0 +1,489 @@
+@media (max-width: 1800px) {
+    .structure {
+        &__blocks__content {
+            width: 75%;
+            margin-right: 15px;
+        }
+    } 
+    .structure__descr {
+        .responsive-br {
+            display: none;
+        }
+    } 
+  }
+
+@media (max-width: 1700px) {
+    .main__blocks {
+        padding-left: 200px;
+    }
+    .development-cost__block {
+        padding-right: 24px;
+    }
+    .technology__block {
+        padding-right: 24px;
+        .responsive-br {
+            display: none;
+        }
+    }
+} 
+
+@media (max-width: 1600px) {
+    .main__blocks__descr__header {
+        font-size: 54px;
+        line-height: 60px;
+        margin-bottom: 25px;
+    }
+    .main__blocks__descr__subheader {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    .about-company {
+        width: 100%;
+        .subheader-blue {
+            margin-right: 24px;
+        }
+    }
+
+
+    .form-group label {
+        font-size: 12px;
+        margin-top: 0;
+    }
+    .submit-btn {
+        margin-top: 23px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .container {
+        padding: 90px 180px 0;
+    }
+    .main__blocks {
+        padding-left: 124px;
+    }
+    .structure {
+        &__header {
+            font-size: 25px;
+        }
+        &__link {
+            font-size: 15px;
+        }
+    }
+    .flex-form {
+        flex-wrap: wrap;
+        justify-content: center;
+        .form-group {
+            width: 80%;
+        }
+        .form-group {
+            margin-right: 16px;
+        }
+        .submit-btn {
+            width: 60%;
+        }
+    }
+    
+}
+
+@media (min-width: 745px) and (max-width: 1200px)  {
+    .container {
+        padding: 120px 30px 0;
+    }
+    .main {
+        padding-bottom: 56px;
+        &__blocks {
+            flex-wrap: wrap;
+            padding: 32px 32px 0;
+            justify-content: center;
+            &__descr {
+                justify-content: center;
+                &__header {
+                    font-size: 48px;
+                    line-height: 48px;
+                    margin-bottom: 32px;
+                    text-align: center;
+                    padding: 0 66px;
+                }
+                &__subheader {
+                    text-align: center;
+                    font-size: 24px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                    font-weight: 500;
+                    .br-responsive {
+                        display: none;
+                    }
+                }
+                &__link {
+                    margin: 0 auto;
+                }
+            }
+            &__img {
+                margin-top: 51px;
+                img {
+                    width: 472px;
+                }
+            } 
+        }
+        &__keyboard-left, &__keyboard-right {
+            top: 300px;        
+        } 
+    }
+
+    .header-general {
+        text-align: start;
+        padding-left: 0;
+    }
+
+    .about-company {
+        &__blocks {
+            flex-wrap: wrap;
+            .block {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    .about-bitrix {
+        &__blocks-top, &__blocks-bottom  {
+            .block {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+
+    .development-cost__blocks {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .structure {
+        .tabs {
+            flex-wrap: wrap;
+            .tab-button {
+               padding: 0 24px;
+            }
+        }
+        .structure {
+            &__blocks {
+                background: linear-gradient(to bottom, rgba(25, 25, 25, 0.8), rgba(25, 25, 25, 0.8)), 
+                url('../img/structure/doctor.svg') ;
+                background-size: cover;
+                background-position: center 20%; 
+                background-repeat: no-repeat;
+                &__content {
+                    width: 100%;
+                }
+            }
+            &__img {
+                display: none;
+            }
+        }
+    }
+    .integration {
+        .container {
+            padding: 120px 0 0 0;
+        }
+        &__block {
+            background-position: center 15%;
+        }
+    }
+    .technology {
+        .container {
+            padding: 120px 0 0 0;
+        }
+        &__header {
+            padding: 32px 0 0 32px;
+        }
+        &__block {
+            &__sub {
+                font-size: 20px;
+            }
+        }
+    }
+    .form {
+        margin-bottom: 87px;
+        .container {
+            padding: 120px 0 0 0;
+        }
+        .flex-form {
+            flex-direction: column;
+            .block-5 {
+                order: 4;
+                margin-top: 6px;
+            }
+            .block-4 {
+                order: 5;
+
+            }
+        }
+        .form-group {
+            flex: none;
+            width: 100%;
+        }
+        .form-group label {
+            font-size: 16px;
+        }
+        .form-footer {
+            padding: 0;
+        }
+        .submit-btn {
+            margin-bottom: 32px;
+        }
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 744px) {
+    .swiper-container {
+        margin: 0 auto;
+        width: 100%;
+        .main {
+            padding-bottom: 39px;
+            &__blocks {
+                flex-wrap: wrap;
+                padding: 32px 32px 0;
+                justify-content: center;
+                &__descr {
+                    justify-content: center;
+                    &__header {
+                        font-size: 32px;
+                        line-height: 32px;
+                        margin-bottom: 16px;
+                        text-align: center;
+                        padding: 0 10px;
+                    }
+                    &__subheader {
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 16px;
+                        margin-bottom: 32px;
+                        font-weight: 500;
+                        .br-responsive {
+                            display: none;
+                        }
+                    }
+                    &__link {
+                        margin: 0 auto;
+                    }
+                }
+                &__img {
+                    margin-top: 32px;
+                    img {
+                        width: 267px;
+                    }
+                } 
+            }
+            &__keyboard-left, &__keyboard-right {
+                top: 125px;        
+            } 
+        }
+    }    
+    .container {
+        padding: 64px 24px 0;
+    }
+    .header-general {
+        font-size: 23px;
+        line-height: 23px;
+        margin-bottom: 0;
+    }
+    .about-company{
+        &__blocks {
+            margin-top: 24px;
+            .block {
+                min-height: 0;
+                flex: 1 1 347px;
+
+            }
+            .subheader-blue {
+                font-size: 20px;
+            }
+            .descr-16px {
+                padding: 16px 24px 32px;
+                margin-bottom: 0;
+            }
+    }
+    }
+    .about-bitrix {
+        &__blocks-top {
+            margin-top: 32px;
+        }
+        .descr-20px {
+            padding: 24px 15px;
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        &__blocks-bottom {
+            margin-bottom: 64px;
+            .block {
+                min-height: 0;
+            }
+            .descr-20px {
+                padding: 24px 15px;
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .development-cost {
+        margin-bottom: 0;
+        padding-bottom: 56px;
+        .container {
+            margin-top: 0;
+        }
+        &__header {
+            text-align: center;
+            line-height: 24px;
+        }
+        &__blocks {
+            grid-template-columns: repeat(1, 1fr); 
+            margin-top: 32px;
+        }
+        &__block {
+            height: auto;
+            .responsive-br {
+                display: none;
+            }
+        }
+        &__block-header {
+            font-size: 20px;
+        }
+        &__block-descr {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+        &__block-link {
+            margin-top: 32px;
+        }
+    }
+    .structure {
+        .container {
+            padding-top: 64px;
+        }
+        &__header-main {
+            text-align: center;
+            line-height: 24px;
+            padding: 0 24px;
+        }
+        .tabs {
+            margin-top: 24px;
+            flex-wrap: wrap;
+            gap: 8px;
+            .tab-button {
+                width: 100%;
+                padding: 12px 24px;
+                font-size: 13px;
+            }
+        }
+        &__blocks__content {
+            background: #191919;
+            margin-right: 0;
+            width: 100%;
+            .structure {
+                &__header {
+                    font-size: 20px;
+                }
+                &__descr {
+                    font-size: 16px;
+                    padding: 0 16px;
+                }
+                &__link {
+                    margin-left: 16px;
+                }
+            }
+        }
+        &__img {
+            display: none;
+        }
+    }
+
+    .integration {
+        .container {
+            padding: 64px 0 0 0;
+        }
+        &__header {
+            line-height: 24px;
+        }
+        &__descr {
+            margin-top: 32px;
+            font-size: 16px;
+            line-height: 23.2px;
+        }
+    }
+
+    .competence-technology__descr {
+        font-size: 16px;
+        margin-top: 32px;
+        line-height: 23.2px;
+    }
+    .competence {
+        &__links-blocks {
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 12px;
+            a img {
+                width: 124px;
+                height: 36px;
+            }
+        }
+    }
+    .technology {
+        .container {
+            padding: 64px 0 0 0;
+        }
+        &__blocks {
+            flex-wrap: wrap;
+            padding: 0 24px;
+        }
+        &__header {
+            padding: 32px 24px 0 24px;
+        }
+        &__padding-descr {
+            padding: 0 24px;
+            font-size: 14px;
+            line-height: 20.3px;
+        }
+        &__block__sub{
+            font-size: 16px;
+            line-height: 23.2px;
+            padding-left: 16px;
+        }
+    } 
+    .form {
+        margin-bottom: 76px;
+        .container {
+            padding: 64px 0 0 0;
+        }
+        .flex-form {
+            flex-direction: column;
+            .block-5 {
+                order: 4;
+                margin-top: 6px;
+            }
+            .block-4 {
+                order: 5;
+
+            }
+        }
+        &__header {
+            margin-bottom: 32px;
+        }
+        .form-group {
+            flex: none;
+            width: 100%;
+        }
+        .form-group label {
+            font-size: 16px;
+        }
+        .form-footer {
+            padding: 0;
+        }
+        .submit-btn {
+            margin-bottom: 32px;
+        }
+    }
+
+}
