@@ -1,5 +1,6 @@
-*{
+* {
     font-family: 'Monsterreat';
+    scroll-behavior: smooth;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
     padding: 0 10%;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
   }  
   .main {
     &__circle {
@@ -44,7 +46,7 @@ body {
       margin: 100px auto;
       border-radius: 50%;
       opacity: 0.3;
-      background-color: #8aa280;
+      background-color: #094f01;
       width: 600px;
       height: 600px;
       align-items: center;
@@ -89,16 +91,126 @@ body {
       color: #a28780;
     }
     &__descr {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
       text-align: center;
       font-size: 18px;
       line-height: 1;
       color: #a28780;
     }
-    &__date {
+  }  
+
+  // Каледнарь
+
+  .calendar {
+      display: inline-block;
+      background-color: transparent;
+      padding: 15px;
+      margin-top: 30px;
+  }
+  .month {
       text-align: center;
-      font-size: 20px;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #a28780;
+  }
+  .days-of-week {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      margin-bottom: 5px;
+      text-align: center;
+      font-weight: bold;
+      color: #a28780;
+  }
+  .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      color: #a28780;
+  }
+  .day {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+  }
+  .day.empty {
+      visibility: hidden;
+  }
+  .heart-day {
+    position: relative;
+    color: white;
+    background-color: #a28780;
+    animation: pulse 1.5s infinite;
+}
+  .heart-day::after {
+      content: '❤';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      font-size: 12px;
+      color: rgb(197, 29, 29);
+  }
+  @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+  }
+
+  .program {
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out;
+    &__wrapper {
+      display: block;
+      margin: 0 auto;
+      padding: 40px 10px;
+      width: 70%;
+      background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(245, 245, 245, 0.356)),
+                   url('../img/programbg1.jpg') center/cover no-repeat;
+      border-radius: 25px;
+      color: white;
+      &__header {
+        font-size: 40px;
+        font-weight: 500;
+      }
+      &__subheader {
+        font-size: 30px;
+        font-weight: 500;
+        margin: 20px 0 0;
+      }
+    }
+  }
+  .program.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .location {
+    margin-top: 100px;
+    &__header {
+      font-size: 40px;
+      font-weight: 500;
+      text-align: center;
+      color: #a28780;
+    }
+    &__img {
+      margin-top: 30px;
+      width: 70%;
+      border-radius: 25px;
+    }
+    &__descr {
+      display: block;
+      margin: 20px auto;
+      width: 70%;
+      font-size: 18px;
       line-height: 1;
       color: #a28780;
     }
-  }  
+  }
 }

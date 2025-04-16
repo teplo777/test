@@ -13,3 +13,24 @@
     }
     isPlaying = !isPlaying;
   });
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const programSection = document.querySelector('.program');
+    
+    function checkVisibility() {
+      const sectionPosition = programSection.getBoundingClientRect();
+      const screenPosition = window.innerHeight / 1.2;
+      
+      if(sectionPosition.top < screenPosition) {
+        programSection.classList.add('visible');
+        window.removeEventListener('scroll', checkVisibility);
+      }
+    }
+    
+    // Проверяем при загрузке
+    checkVisibility();
+    
+    // И при скролле
+    window.addEventListener('scroll', checkVisibility);
+  });
