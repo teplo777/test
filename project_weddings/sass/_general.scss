@@ -96,7 +96,7 @@ body {
       width: 70%;
       text-align: center;
       font-size: 18px;
-      line-height: 1;
+      line-height: 1.2;
       color: #a28780;
     }
   }  
@@ -171,8 +171,8 @@ body {
       margin: 0 auto;
       padding: 40px 10px;
       width: 70%;
-      background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(245, 245, 245, 0.356)),
-                   url('../img/programbg1.jpg') center/cover no-repeat;
+      opacity: 0.3;
+      background-color: #094f01;
       border-radius: 25px;
       color: white;
       &__header {
@@ -209,8 +209,91 @@ body {
       margin: 20px auto;
       width: 70%;
       font-size: 18px;
-      line-height: 1;
+      line-height: 1.2;
       color: #a28780;
+    }
+  }
+
+  .dress-code {
+    margin-top: 100px;
+    &__header {
+      font-size: 40px;
+      font-weight: 500;
+      text-align: center;
+      color: #a28780;
+    }
+    &__descr { 
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      font-size: 18px;
+      line-height: 1.2;
+      color: #a28780;
+    }
+    &__color{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      opacity: 0;
+      transform: translateX(-50px); /* Начальное смещение влево */
+      transition: opacity 1.5s ease, transform 1.5s ease;
+      .dress-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 45px;
+        margin-top: 15px;
+        transition: transform 1.5s ease;
+      }
+      .chocolate-man {
+        background-color: #51352A;
+      }
+      .dark-chocolate {
+        background-color: #8A534C;
+      }
+      .chocolate {
+        background-color: #9F7D64;
+      }
+      .latte {
+        background-color:#D4AF9C;
+      }
+      .latte-man {
+        background-color: #BFA197;
+      }
+      .olive {
+        background-color: #59543E;
+      }
+      .olive-man {
+        background-color: #737051;
+      }
+      .light-olive {
+        background-color: #8E8F6F;
+      }
+      .white {
+        background-color: white;
+      }
+    }
+    &__color.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .details {
+    margin-top: 100px;
+    &__header {
+      font-size: 40px;
+      font-weight: 500;
+      text-align: center;
+      color: #a28780;
+    }
+    &__descr { 
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      font-size: 18px;
+      line-height: 1.2;
+      color: #a28780;
+      margin-bottom: 10px;
     }
   }
 }

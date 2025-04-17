@@ -34,3 +34,20 @@
     // И при скролле
     window.addEventListener('scroll', checkVisibility);
   });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const colorBlock = document.querySelector('.dress-code__color');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.3 }); // Срабатывает, когда 30% элемента в зоне видимости
+    
+    if (colorBlock) {
+      observer.observe(colorBlock);
+    }
+  });
