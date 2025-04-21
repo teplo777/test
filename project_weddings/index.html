@@ -166,6 +166,85 @@
         другого любимого напитка а также записку о событии, к которому можно было бы привязать его открытие.</p>
     </div>
   </section>
+  <section class="application">
+    <div class="container">
+      <div class="application__wrapper">
+        <h2 class="application__wrapper__header">Анкета</h2>
+        <form id="telegramForm">
+          <div class="form-group">
+            <label for="firstName">Напишите, пожалуйста, Ваши ФИО</label>
+            <input type="text" id="firstName" name="firstName" required placeholder="Ваши ФИО">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+            <div id="phoneError" class="error" style="display: none;">Номер телефона должен содержать минимум 10 цифр
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-group__question">Сможете ли присутствовать на нашем Торжестве?</label>
+            <div class="options-list">
+              <div class="option-item">
+                <input type="radio" id="presenceYes" name="presence" value="С удовольствием приду" required>
+                <label for="presenceYes">Я с удовольствием приду</label>
+              </div>
+              <div class="option-item">
+                <input type="radio" id="presenceNo" name="presence" value="Не смогу присутствовать">
+                <label for="presenceNo">К сожалению, не смогу присутствовать</label>
+              </div>
+              <div class="option-item">
+                <input type="radio" id="presenceLater" name="presence" value="Сообщу позже">
+                <label for="presenceLater">Сообщу позже</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-group__question">Что предпочитаете из напитков?</label>
+            <div class="options-list">
+              <div class="option-item">
+                <input type="checkbox" id="red-vine" name="drinkPreferences" value="Красное вино">
+                <label for="red-vine">Красное вино</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="white-vine" name="drinkPreferences" value="Белое вино">
+                <label for="white-vine">Белое вино</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="champagne" name="drinkPreferences" value="Шампанское">
+                <label for="champagne">Шампанское</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="vodka" name="drinkPreferences" value="Водка">
+                <label for="vodka">Водка</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="whiskey" name="drinkPreferences" value="Виски">
+                <label for="whiskey">Виски</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="cognac" name="drinkPreferences" value="Коньяк">
+                <label for="cognac">Коньяк</label>
+              </div>
+              <div class="option-item">
+                <input type="checkbox" id="no-alc" name="drinkPreferences" value="Не пью алкоголь">
+                <label for="no-alc">Не пью алкоголь</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="application__wrapper__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="good_bye">
+    <div class="container">
+      <h2 class="good_bye__header">До скорых встреч</h2>
+    </div>
+  </section>
   <script src="js/script.js"></script>
 </body>
 
