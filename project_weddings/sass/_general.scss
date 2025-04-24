@@ -3,6 +3,22 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: 'Actinia';
+  src: url('../fonts/Actinia-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeinrichScript';
+  src: url('../fonts/HeinrichScript.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   .background-container {
     position: fixed;
@@ -30,7 +46,7 @@ body {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.651), rgba(255, 255, 255, 0.601));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.153), rgba(255, 255, 255, 0.153));
     z-index: 1;
   }
   .container {
@@ -43,31 +59,32 @@ body {
     &__circle {
       display: flex;
       margin: 100px auto;
-      border-radius: 50%;
-      opacity: 0.3;
-      background-color: #094f01;
-      width: 600px;
-      height: 600px;
+      opacity: 0.4;
+      background: url('../img/bg1main.jpg') center/cover no-repeat;
+      width: 800px;
+      height: 800px;
       align-items: center;
       justify-content: center;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
       h1 {
-        font-family: 'Ephesis';
+        font-family: 'HeinrichScript';
         font-size: 100px;
         font-weight: 400;
         text-align: center;
-        color: rgb(255, 255, 255);
+        color: #094f01;
     }
     }
   }
   // Музыка
   .music {
-    margin: 200px 0 50px;
+    margin: 150px 0 50px;
     &__header {
       text-align: center;
-      font-size: 18px;
       line-height: 1;
       color: #a28780;
+      font-size: 20px;
+      font-family: 'Poiret One';
+      font-weight: 800;
     }
     .play-btn {
       display: block;
@@ -88,15 +105,18 @@ body {
       font-weight: 500;
       text-align: center;
       color: #a28780;
+      font-family: 'great vibes';
     }
     &__descr {
       display: block;
       margin: 0 auto;
       width: 70%;
       text-align: center;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.2;
       color: #a28780;
+      font-family: 'Poiret One';
+      font-weight: 800;
     }
   }  
 
@@ -107,12 +127,15 @@ body {
       background-color: transparent;
       padding: 15px;
       margin-top: 30px;
+      font-weight: 800;
   }
   .month {
       text-align: center;
       font-size: 24px;
       margin-bottom: 10px;
       color: #a28780;
+      font-family: 'Poiret One';
+      font-weight: 800;
   }
   .days-of-week {
       display: grid;
@@ -122,12 +145,16 @@ body {
       text-align: center;
       font-weight: bold;
       color: #a28780;
+      font-family: 'Poiret One';
+      font-weight: 800;
   }
   .days {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 5px;
       color: #a28780;
+      font-family: 'Poiret One';
+      font-weight: 800;
   }
   .day {
       width: 30px;
@@ -136,6 +163,8 @@ body {
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+      font-family: 'Poiret One';
+      font-weight: 800;
   }
   .day.empty {
       visibility: hidden;
@@ -177,11 +206,19 @@ body {
       &__header {
         font-size: 40px;
         font-weight: 500;
+        font-family: 'great vibes';
       }
       &__subheader {
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 500;
         margin: 20px 0 0;
+        font-family: 'Poiret One';
+        font-weight: 800;
+      }
+      &__descr {
+        font-family: 'Poiret One';
+        font-weight: 800;
+        font-size: 20px;
       }
     }
   }
@@ -197,6 +234,7 @@ body {
       font-weight: 500;
       text-align: center;
       color: #a28780;
+      font-family: 'great vibes';
     }
     &__img {
       margin-top: 30px;
@@ -207,9 +245,11 @@ body {
       display: block;
       margin: 20px auto;
       width: 70%;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.2;
       color: #a28780;
+      font-family: 'Poiret One';
+      font-weight: 800;
     }
   }
 
@@ -220,14 +260,17 @@ body {
       font-weight: 500;
       text-align: center;
       color: #a28780;
+      font-family: 'great vibes';
     }
     &__descr { 
       display: block;
       margin: 0 auto;
       width: 70%;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.2;
       color: #a28780;
+      font-family: 'Poiret One';
+      font-weight: 800;
     }
     &__color{
       display: flex;
@@ -284,15 +327,18 @@ body {
       font-weight: 500;
       text-align: center;
       color: #a28780;
+      font-family: 'great vibes';
     }
     &__descr { 
       display: block;
       margin: 0 auto;
       width: 70%;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.2;
       color: #a28780;
       margin-bottom: 10px;
+      font-family: 'Poiret One';
+      font-weight: 800;
     }
   }
   .application {
@@ -310,18 +356,26 @@ body {
         font-size: 40px;
         font-weight: 500;
         text-align: center;
+        font-family: 'HeinrichScript';
+        span {
+          font-size: 15px;
+          font-family: 'Poiret One';
+        }
       }
       .form-group {
         display: flex;
         flex-direction: column;
         justify-content: left;
         text-align: left;
-        font-size: 18px;
+        font-size: 20px;
+        font-family: 'Poiret One';
         label, input {
-          font-size: 18px;
+          font-size: 20px;
+          font-family: 'Poiret One';
         }
         &__question {
           margin-top: 10px;
+          font-family: 'Poiret One';
         }
         input[type='text'], input[type='tel']  {
           width: 80%;
@@ -332,18 +386,60 @@ body {
         width: 30%;
         border-radius: 25px;
         border: 2px solid #a28780;
-        font-size: 18px;
+        font-size: 20px;
+        font-family: 'Poiret One';
       }
     }
   }
   .good_bye {
     margin: 100px 0;
     &__header {
-      font-family: 'Ephesis';
+      font-family: 'HeinrichScript';
       font-size: 100px;
       font-weight: 400;
       text-align: center;
       color: #a28780;
+      span {
+        color: rgb(197, 29, 29);
+        opacity: 0.9;
+      }
+    }
+  }
+
+
+  .timer {
+    margin-top: 100px;
+    &__header {
+      font-family: 'great vibes';
+      font-size: 40px;
+      font-weight: 500;
+      text-align: center;
+      color: #a28780;
+    }
+    #countdown {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+  
+    }
+  
+    #countdown > div {
+        color: #a28780;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 2px solid #a28780; 
+        min-width: 60px;
+    }
+  
+    #countdown span {
+        font-size: 2em;
+        font-weight: bold;
+    }
+  
+    .smalltext {
+        font-size: 0.8em;
+        opacity: 0.8;
     }
   }
 }

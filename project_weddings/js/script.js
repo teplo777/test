@@ -131,3 +131,40 @@
         alert('Произошла ошибка при отправке данных.');
     });
 });
+
+
+
+
+
+
+
+// Установите дату окончания отсчета
+const countDownDate = new Date("Jun 27, 2025 00:00:00").getTime();
+
+// Обновляем таймер каждую секунду
+const x = setInterval(function() {
+
+    // Получаем текущую дату и время
+    const now = new Date().getTime();
+    
+    // Разница между текущим и конечным временем
+    const distance = countDownDate - now;
+    
+    // Расчет дней, часов, минут, секунд
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Выводим результат
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+    
+    // Если отсчет завершен
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Время истекло!";
+    }
+}, 1000);
