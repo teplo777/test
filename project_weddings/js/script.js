@@ -56,81 +56,103 @@
 
 
 
-  document.getElementById('telegramForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Проверка телефона
-    const phoneInput = document.getElementById('phone');
-    const phoneError = document.getElementById('phoneError');
-    const phoneNumber = phoneInput.value.replace(/\D/g, '');
-    
-    if (phoneNumber.length < 10) {
+  document.addEventListener('DOMContentLoaded', function() {
+    // Показываем поле "Другое" для напитков
+    document.getElementById('other-drink').addEventListener('change', function() {
+      const otherDrinkText = document.getElementById('otherDrinkText');
+      otherDrinkText.style.display = this.checked ? 'block' : 'none';
+      if (!this.checked) otherDrinkText.value = '';
+    });
+  
+    // Обработка отправки формы
+    document.getElementById('telegramForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Проверка телефона
+      const phoneInput = document.getElementById('phone');
+      const phoneError = document.getElementById('phoneError');
+      const phoneNumber = phoneInput.value.replace(/\D/g, '');
+      
+      if (phoneNumber.length < 10) {
         phoneError.style.display = 'block';
         return;
-    } else {
+      } else {
         phoneError.style.display = 'none';
-    }
-    
-    // Проверка выбора присутствия
-    const presenceChoice = document.querySelector('input[name="presence"]:checked');
-    if (!presenceChoice) {
+      }
+      
+      // Проверка выбора присутствия
+      const presenceChoice = document.querySelector('input[name="presence"]:checked');
+      if (!presenceChoice) {
         alert("Пожалуйста, укажите, сможете ли вы присутствовать!");
         return;
-    }
-    
-    // Получение данных формы
-    const firstName = document.getElementById('firstName').value;
-    const phone = phoneInput.value;
-    const presence = presenceChoice.value;
-    
-    // Получение предпочтений напитков
-    const drinkPreferences = [];
-    document.querySelectorAll('input[name="drinkPreferences"]:checked').forEach(checkbox => {
-        drinkPreferences.push(checkbox.value);
-    });
-    
-    // Настройки бота
-    const botToken = '7850603844:AAH8tgjqf0fq82bRh7zYJJUkHagDx2RvPJU';
-    const privateChatId = '1007887235'; // Ваш личный чат
-    const groupChatId = '-4701792735'; // ID группы (замените на реальный)
-    
-    const message = `
+      }
+      
+      // Получение данных формы
+      const firstName = document.getElementById('firstName').value;
+      const phone = phoneInput.value;
+      const presence = presenceChoice.value;
+      const allergy = document.getElementById('allergy').value; // Новое поле: аллергия
+      
+      // Получение предпочтений напитков (включая свободный вариант)
+      const drinkPreferences = [];
+      document.querySelectorAll('input[name="drinkPreferences"]:checked').forEach(checkbox => {
+        if (checkbox.id === 'other-drink' && checkbox.checked) {
+          const otherDrinkText = document.getElementById('otherDrinkText').value;
+          if (otherDrinkText.trim() !== '') {
+            drinkPreferences.push(`Другое: ${otherDrinkText}`);
+          }
+        } else {
+          drinkPreferences.push(checkbox.value);
+        }
+      });
+  
+      // Настройки бота (оставьте ваши токен и chat_id)
+      const botToken = '7850603844:AAH8tgjqf0fq82bRh7zYJJUkHagDx2RvPJU';
+      const privateChatId = '1007887235'; // Ваш личный чат
+      const groupChatId = '-4701792735'; // ID группы
+      
+      // Формируем сообщение с новыми полями
+      const message = `
         Новая заявка:
         👤 ФИО: ${firstName}
         📞 Телефон: ${phone}
         🎉 Присутствие: ${presence}
         🍷 Напитки: ${drinkPreferences.join(', ') || 'Не указано'}
-    `;
-    
-    // Функция для отправки в один чат
-    const sendToChat = (chatId) => {
+        ⚠️ Аллергия: ${allergy || 'Нет аллергии'}
+      `;
+      
+      // Функция для отправки в Telegram
+      const sendToChat = (chatId) => {
         return fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chat_id: chatId,
-                text: message,
-            }),
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+          }),
         });
-    };
-    
-    // Отправляем в оба чата параллельно
-    Promise.all([
+      };
+      
+      // Отправляем в оба чата
+      Promise.all([
         sendToChat(privateChatId),
         sendToChat(groupChatId)
-    ])
-    .then(responses => Promise.all(responses.map(r => r.json())))
-    .then(data => {
+      ])
+      .then(responses => Promise.all(responses.map(r => r.json())))
+      .then(data => {
         alert('Данные успешно отправлены!');
         document.getElementById('telegramForm').reset();
-    })
-    .catch((error) => {
+        // Скрываем поле "Другое" после сброса формы
+        document.getElementById('otherDrinkText').style.display = 'none';
+      })
+      .catch((error) => {
         console.error('Error:', error);
         alert('Произошла ошибка при отправке данных.');
+      });
     });
-});
+  });
 
 
 

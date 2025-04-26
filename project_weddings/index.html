@@ -21,9 +21,9 @@
   </div>
   <section class="main">
     <div class="container">
-      <div class="main__circle">
-        <h1>
-          Aртемий <br> и <br> Виктория
+      <div class="main__wrapper">
+        <h1 class="main__wrapper__header">
+          Артемий <br> и <br> Виктория
         </h1>
       </div>
     </div>
@@ -40,7 +40,8 @@
       <h2 class="guests__header">Дорогие Родные и Друзья!</h2>
       <p class="guests__descr">Совсем скоро состоится день, когда мы свяжем свои сердца узами любви на нашей свадьбе.
       </p>
-      <p class="guests__descr">Мы рады пригласить Вас разделить радость особенного для нас события и стать частью начала
+      <p class="guests__descr">Мы рады пригласить Вас разделить радость особенного для нас события и стать частью
+        начала
         нашей семейной истории,
       </p>
     </div>
@@ -252,7 +253,19 @@
                 <input type="checkbox" id="no-alc" name="drinkPreferences" value="Не пью алкоголь">
                 <label for="no-alc">Не пью алкоголь</label>
               </div>
+              <div class="option-item transfer-item">
+                <input type="checkbox" id="other-drink" name="drinkPreferences" value="Другое">
+                <label for="other-drink">Другое</label>
+                <input type="text" id="otherDrinkText" name="otherDrink" style="display: none; margin-top: 5px;"
+                  placeholder="Укажите ваш вариант">
+              </div>
             </div>
+          </div>
+
+          <div class="form-group">
+            <label for="allergy">Есть ли у вас аллергия на какие-то продукты?</label>
+            <input type="text" id="allergy" name="allergy"
+              placeholder="Укажите, если есть аллергия (если нет, оставьте пустым)">
           </div>
 
           <button type="submit" class="application__wrapper__btn">Отправить</button>
