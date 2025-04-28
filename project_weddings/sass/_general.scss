@@ -63,7 +63,7 @@ body {
       height: 80vmin;
       align-items: center;
       justify-content: center;
-      
+      overflow: hidden;
       &::before {
         content: '';
         position: absolute;
