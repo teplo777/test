@@ -54,10 +54,11 @@ body {
     text-align: center;
   }  
   .main {
+    margin-top: 30px;
     &__wrapper {
       position: relative;
       display: flex;
-      margin: 5vh auto;
+      margin: 0 auto;
       width: 80vmin;
       height: 80vmin;
       align-items: center;
