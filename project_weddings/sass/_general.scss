@@ -1,6 +1,20 @@
+:root {
+  color-scheme: only light; /* Блокирует темную тему */
+}
+
 * {
     font-family: 'Monsterreat', sans-serif;
     scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Majestic';
+  src: 
+    url('../fonts/Majestic_0.woff2') format('woff2'), 
+    url('../fonts/Majestic_0.woff') format('woff'),   
+    url('../fonts/Majestic_0.ttf') format('truetype'); 
+  font-weight: 400;
+  font-display: swap;
 }
 
 body {
@@ -65,7 +79,7 @@ body {
       &__header {
         position: relative;
         z-index: 1;
-        font-family: 'great vibes';
+        font-family: 'Majestic';
         font-size: clamp(40px, 12vmin, 100px);
         color: #a28780;
       }
@@ -83,6 +97,9 @@ body {
       font-weight: 800;
     }
     .play-btn {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
       display: block;
       margin: 0 auto;
       color: #a28780;
@@ -382,7 +399,7 @@ body {
   .good_bye {
     margin: 100px 0;
     &__header {
-      font-family: 'great vibes';
+      font-family: 'Majestic';
       font-size: clamp(40px, 10vmin, 100px);
       font-weight: 400;
       text-align: center;
