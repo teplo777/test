@@ -60,9 +60,10 @@ body {
       position: relative;
       display: flex;
       margin: 0 auto;
-      width: min(80vmin, 90%); /* Не больше 90% экрана */
+      width: min(80vmin, 100% - 40px); /* Более надежная формула */
       height: 80vmin;
-      max-width: 100%; /* Защита от переполнения */
+      max-width: 800px; /* Фиксируем максимальный размер */
+      aspect-ratio: 1/1; /* Сохраняем квадратные пропорции */
       align-items: center;
       justify-content: center;
       overflow: hidden;
