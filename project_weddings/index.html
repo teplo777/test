@@ -31,7 +31,16 @@
   <section class="music">
     <div class="container">
       <h2 class="music__header">включи музыку нашей любви...</h2>
-      <button id="play-button" class="play-btn">▶</button>
+      <button id="play-button" class="play-btn" aria-label="Воспроизвести">
+        <svg class="play-icon" width="30" height="30" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <!-- Треугольник для Play -->
+          <path class="play-shape" d="M8 5V19L19 12L8 5Z" fill="#a28780" />
+
+          <!-- Квадраты для Pause (изначально скрыты) -->
+          <path class="pause-shape" d="M9 19H13V5H9V19ZM15 5H19V19H15V5Z" fill="#a28780" style="display:none;" />
+        </svg>
+      </button>
       <audio id="bg-music" src="music/wed-mus.mp3" preload="auto" loop></audio>
     </div>
   </section>

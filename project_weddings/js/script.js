@@ -1,19 +1,22 @@
 
-  const btn = document.getElementById('play-button');
-  const music = document.getElementById('bg-music');
-  let isPlaying = false;
+const playBtn = document.getElementById('play-button');
+const audio = document.getElementById('bg-music');
+const playShape = document.querySelector('.play-shape');
+const pauseShape = document.querySelector('.pause-shape');
 
-  btn.addEventListener('click', () => {
-    if (!isPlaying) {
-      music.play();
-      btn.textContent = '⏸'; // Меняем значок на паузу
-    } else {
-      music.pause();
-      btn.textContent = '▶'; // Назад на play
-    }
-    isPlaying = !isPlaying;
-  });
-
+playBtn.addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+    playShape.style.display = 'none';
+    pauseShape.style.display = 'block';
+    this.setAttribute('aria-label', 'Пауза');
+  } else {
+    audio.pause();
+    playShape.style.display = 'block';
+    pauseShape.style.display = 'none';
+    this.setAttribute('aria-label', 'Воспроизвести');
+  }
+});
 
   document.addEventListener('DOMContentLoaded', function() {
     const programSection = document.querySelector('.program');
